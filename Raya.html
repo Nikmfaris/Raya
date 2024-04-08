@@ -9,11 +9,11 @@
     <title>Document</title>
 </head>
 
-<body class="bg-image shadow-2-strong">
+<body class="p-3 mb-2 bg-success text-white ">
     
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary "  >
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"  >
+        <div class="container-fluid ">
           <a class="navbar-brand" href="https://github.com/"><span class="brand-prefix">&lt;</span>NiK<span class="brand-suffix">&#47;&gt;</span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,8 +32,72 @@
           </div>
         </div>
       </nav>
-      <b class="ball"></b>
- 
+      
+      <div class="grid">
+        <label for="front" class="btn">Front</label>
+        <label for="left" class="btn"> Left </label>
+        <label for="right" class="btn"> Right </label>
+        <label for="top" class="btn">Top </label>
+        <label for="bottom" class="btn">Bottom </label>
+        <label for="back" class="btn">Back </label>
+      </div>
+      <input type="radio" name="face" id="front" />
+      <input type="radio" id="left" name="face" />
+      <input type="radio" id="right" name="face" />
+      <input type="radio" id="top" name="face" />
+      <input type="radio" id="bottom" name="face" />
+      <input type="radio" id="back" name="face" />
+  
+      <div class="container">
+        <div class="cube">
+          <div class="face front">front</div>
+          <div class="face left">Left</div>
+          <div class="face right">Right</div>
+          <div class="face top">Top</div>
+          <div class="face bottom">Bottom</div>
+          <div class="face back"> <button id="openModalBtn">Click</button> </div>
+          
+          
+         
+          
+        </div>
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <div class="modal-content">
+            <img src="img/back.jpg" alt="Image">
+          </div>
+          
+        </div>
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+      
+          // Get the button that opens the modal
+          var btn = document.getElementById("openModalBtn");
+      
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+      
+          // When the user clicks the button, open the modal
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+      
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+      
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+
+      </div>
+      
 
 
 

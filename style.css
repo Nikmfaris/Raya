@@ -3,172 +3,19 @@ body {
   background-color: #191919;
   
 }
-b.ball {
-  display: block;
-  width: 200px;
-  height: 200px;
-  margin: 30px auto 0;
-  background-color: #3b4ba3;
-  border-radius: 50%;
-  box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
-  background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
-  background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);  
-  background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
-  background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+.k_1{
+  width: 200px; /* Set the width of the image */
+  height: auto;
+  padding-bottom: 90px;
 }
-.bg-success {
-  
-  --bs-bg-opacity: 100;
-  background: rgb(63,251,173);
-  
-  
+.k2{
+  width: 200px; /* Set the width of the image */
+  height: auto;
+  padding-bottom: 90px;
 }
-
-:root {
-  --size: 300px;
+.navbar{
+  border-radius: 15px;
 }
-/* 300 */
-
-/* container */
-.container {
-  margin-top: 50px;
-  perspective: 1000px;
-  width: var(--size);
-  height: var(--size);
-  color: rebeccapurple;
-}
-
-.cube {
-  position: relative;
-  
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  
-  transition: all 0.85s cubic-bezier(1, -0.75, 0.5, 1.2);
-  
-  
-  
-  /* turn the cube  */
-  /* transform: rotateX(90deg); */
-  /* transform: rotateY(90deg); */
-}
-
-/* Faces */
-.face {
-  position: absolute;
-  border: 1px solid rgba(142, 142, 142, 0.683);
-  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
-  width: var(--size);
-  height: var(--size);
-  line-height: var(--size);
-  text-align: center;
-  font-size: 1.25rem;
-  background-color: greenyellow;
-  opacity: 0.8;
-  
-}
-
-.front {
-  transform: translateZ(150px);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(150px);
-  
-  
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(150px);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(150px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(150px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(150px);
-}
-
-/* Interactions */
-#bottom:checked ~ .container .cube {
-  transform: rotateX(90deg);
-}
-
-#top:checked ~ .container .cube {
-  transform: rotateX(-90deg);
-}
-
-#left:checked ~ .container .cube {
-  transform: rotateY(90deg);
-}
-
-#right:checked ~ .container .cube {
-  transform: rotateY(-90deg);
-}
-
-#back:checked ~ .container .cube {
-  transform: rotateY(180deg);
-}
-
-/* Buttons */
-input[type="radio"] {
-  display: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-}
-.btn {
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
-  border-radius: 0.25rem;
-  background-color: #4caf50;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-}
-
-.btn:hover {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #4caf50;
-}
-#openModalBtn{
-  opacity: 1;
-}
-
-.modal-content img {
-  width: 100%;
-  height: 50%;
-}
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal content */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  
-}
-
 
 .scene {
   width: 200px;
@@ -185,6 +32,15 @@ input[type="radio"] {
   transform-style: preserve-3d;
   transform: translateZ(-100px);
   transition: transform 0.8s;
+  
+}
+
+.box_cube{
+  padding-top: 80px;
+}
+
+.box_radio{
+  padding-top: 90px;
 }
 
 .cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
@@ -200,16 +56,19 @@ input[type="radio"] {
   height: 200px;
   border: 2px solid black;
   line-height: 200px;
-  font-size: 40px;
+  font-size: 100%;
   font-weight: bold;
-  color: white;
+  color: black;
   text-align: center;
+  background: rgb(223, 225, 235);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.cube__face--front  { background: hsla(  0, 100%, 50%, 0.7); }
-.cube__face--right  { background: hsla( 60, 100%, 50%, 0.7); }
-.cube__face--back   { background: hsla(120, 100%, 50%, 0.7); }
-.cube__face--left   { background: hsla(180, 100%, 50%, 0.7); }
+.cube__face--front  { background: whitesmoke }
+.cube__face--right  { background: green }
+.cube__face--back   { background: yellow }
+.cube__face--left   { background: blue }
 .cube__face--top    { background: hsla(240, 100%, 50%, 0.7); }
 .cube__face--bottom { background: hsla(300, 100%, 50%, 0.7); }
 
@@ -222,7 +81,16 @@ input[type="radio"] {
 
 label { margin-right: 10px; }
 
-
-.containe-sm{
-  align-items: center;
+.card {
+  width: 300px;
+  height: 404px;
+  padding-top:0px ;
+  background: rgb(223, 225, 235);
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#click_qr:hover {
+ 
+  color: yellow;
+  transition: color 0.9s ease-in-out;
 }

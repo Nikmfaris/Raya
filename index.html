@@ -33,72 +33,62 @@
         </div>
       </nav>
       
-      <div class="grid">
-        <label for="front" class="btn">Front</label>
-        <label for="left" class="btn"> Left </label>
-        <label for="right" class="btn"> Right </label>
-        <label for="top" class="btn">Top </label>
-        <label for="bottom" class="btn">Bottom </label>
-        <label for="back" class="btn">Back </label>
-      </div>
-      <input type="radio" name="face" id="front" />
-      <input type="radio" id="left" name="face" />
-      <input type="radio" id="right" name="face" />
-      <input type="radio" id="top" name="face" />
-      <input type="radio" id="bottom" name="face" />
-      <input type="radio" id="back" name="face" />
-  
-      <div class="container">
+     
+  <div class="container-fluid justify-content-center">100% wide until small breakpoint</div>
+
+      <div class="scene d-flex justify-content-center">
         <div class="cube">
-          <div class="face front">front</div>
-          <div class="face left">Left</div>
-          <div class="face right">Right</div>
-          <div class="face top">Top</div>
-          <div class="face bottom">Bottom</div>
-          <div class="face back"> <button id="openModalBtn">Click</button> </div>
-          
-          
-         
-          
+          <div class="cube__face cube__face--front">front</div>
+          <div class="cube__face cube__face--back">back</div>
+          <div class="cube__face cube__face--right">right</div>
+          <div class="cube__face cube__face--left">left</div>
+          <div class="cube__face cube__face--top">top</div>
+          <div class="cube__face cube__face--bottom">bottom</div>
         </div>
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <div class="modal-content">
-            <img src="img/back.jpg" alt="Image">
-          </div>
-          
-        </div>
-        <script>
-          // Get the modal
-          var modal = document.getElementById("myModal");
-      
-          // Get the button that opens the modal
-          var btn = document.getElementById("openModalBtn");
-      
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
-      
-          // When the user clicks the button, open the modal
-          btn.onclick = function() {
-            modal.style.display = "block";
-          }
-      
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function() {
-            modal.style.display = "none";
-          }
-      
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-        </script>
-
       </div>
-      
+      <p class="radio-group d-flex justify-content-center">
+        <label>
+          <input type="radio" name="rotate-cube-side" value="front" checked /> front
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="right" /> right
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="back" /> back
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="left" /> left
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="top" /> top
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
+        </label>
+      </p>
 
+      <script>
+                  var cube = document.querySelector('.cube');
+          var radioGroup = document.querySelector('.radio-group');
+          var currentClass = '';
+
+          function changeSide() {
+            var checkedRadio = radioGroup.querySelector(':checked');
+            var showClass = 'show-' + checkedRadio.value;
+            if ( currentClass ) {
+              cube.classList.remove( currentClass );
+            }
+            cube.classList.add( showClass );
+            currentClass = showClass;
+          }
+          // set initial side
+          changeSide();
+
+          radioGroup.addEventListener( 'change', changeSide );
+      </script>
+      
+      
+  </div>
 
 
 </body>

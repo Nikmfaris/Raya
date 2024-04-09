@@ -22,7 +22,7 @@
             <ul class="navbar-nav">
              
               <li class="nav-item">
-                <a class="nav-link" href="#">Source Code</a>
+                <a class="nav-link" href="https://github.com/Nikmfaris/Raya">Source Code</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a>
@@ -47,46 +47,93 @@
           </div>
         </div>
       </div>
-      
      
-  
+      
       
   <div class="container-fluid box_cube d-flex justify-content-center align-items-center ">
     <div class="cube ">
       <div class="cube__face cube__face--front">selamat hari raya mat</div>
-      <div class="cube__face cube__face--back">back</div>
-      <div class="cube__face cube__face--right">right</div>
+      
+      <div class="cube__face cube__face--right">Maaf zahir dan batin</div>
+      <div class="cube__face cube__face--back"></div>
       <div class="cube__face cube__face--left">left</div>
       <div class="cube__face cube__face--top">top</div>
-      <div class="cube__face cube__face--bottom" id="click_qr">tap me2 pls</div>
+      <div class="cube__face cube__face--bottom" id="openModalBtn">plz tap smh</div>
+
+      
 
      
     </div>
   </div>
-      <p class="radio-group box_radio d-flex justify-content-center">
-        <label>
-          <input type="radio" name="rotate-cube-side" value="front" checked /> 1
-        </label>
-        <label>
-          <input type="radio" name="rotate-cube-side" value="right" /> 2
-        </label>
-        <label>
-          <input type="radio" name="rotate-cube-side" value="back" /> 3
-        </label>
-        <label>
-          <input type="radio" name="rotate-cube-side" value="left" /> 4
-        </label>
-        <label>
-          <input type="radio" name="rotate-cube-side" value="top" /> 5
-        </label>
-        <label>
-          <input type="radio" name="rotate-cube-side" value="bottom" /> 6
-        </label>
-      </p>
+
+  <div class="col">
+    <p class="radio-group box_radio d-flex justify-content-center">
+      <label>
+        <input type="radio" name="rotate-cube-side" value="front" checked /> 1
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="right" /> 2
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="back" /> 3
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="left" /> 4
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="top" /> 5
+      </label>
+      <label>
+        <input type="radio" name="rotate-cube-side" value="bottom" /> 6
+      </label>
+    </p>
+
+  </div>
+
+   <!-- Modal -->
+   <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="d-flex justify-content-center">share2 sikit duit raya</p>
+        <img src="img/qr_nik.png" alt="Image" style="width: 100%;">    </div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("openModalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+
+    
       
+    
 
       <script>
         // button
+      
       
 
 
@@ -110,6 +157,7 @@
 
           radioGroup.addEventListener( 'change', changeSide );
       </script>
+  
 
 
 

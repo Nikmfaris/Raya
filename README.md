@@ -9,7 +9,7 @@ mat ri ye
 
 ## 📸 Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 1](img/yes-raya.mp4)
 ![Screenshot 2](screenshots/screenshot2.png)
 
 ## 🎨 Features

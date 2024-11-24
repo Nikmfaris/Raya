@@ -9,8 +9,7 @@ mat ri ye
 
 ## 📸 Screenshots
 mls ah nak ss
-![Screenshot 1](img/yes-raya-00.gif)
-![Screenshot 2](screenshots/screenshot2.png)
+
 
 ## 🎨 Features
 

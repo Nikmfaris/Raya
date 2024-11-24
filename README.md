@@ -21,9 +21,7 @@ mls ah nak ss
 - CSS (Bootstrap)
 - JavaScript
 
-## 🤝 Contributing
 
-Contributions are welcome! Feel free to submit issues and pull requests.
 
 ## 📧 Contact
 no need contact ah
